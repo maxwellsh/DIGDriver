@@ -1,0 +1,99 @@
+package:
+  name: digdriver
+  version: 0.1
+
+source:
+  # simply where it sits in git
+  #git_url: https://github.com/AdamYaari/mutation_density.git
+  path: ../
+
+build:            # from HPC support guy
+  number: 0
+  preserve_egg_dir: True
+  script: $PYTHON setup.py install --single-version-externally-managed --record=record.txt
+
+
+requirements:
+# My understanding is that requirements needs to include the package
+# dependecies (aka other packages called in the package I am uploading)
+#
+# package can be built by calling conda build . from within the package folde
+# given that the folder contains meta.yaml file like this one and the build.sh file
+
+# then I can run
+# conda convert --platform all /opt/anaconda3/conda-bld/osx-64/r-hdatds-0.1.0-r35_0.tar.bz2
+# to make the package be usable acrros different platforms
+  build:
+    - r-base=3.5
+    - python=3.7.1
+  host:
+    - python=3.7.1
+    - r-base=3.5
+    - pip=21.1.3
+    - setuptools=49.6.0
+    - bedtools=2.30.0
+    - r-base=3.5
+    - r-seqinr=3.6_1
+    - r-MASS=7.3_51.6
+    - bioconductor-genomicranges=1.34.0
+    - bioconductor-biostrings=2.50.2
+    - bioconductor-iranges=2.16.0
+    - bioconductor-rsamtools=1.34.0
+    - r-poilog=0.4
+    - r-plyr=1.8.6
+    - numpy=1.21.0
+    - scipy=1.5.3
+    - statsmodels=0.12.2
+    - pandas=1.3.0
+    - h5py=3.1.0
+    - pysam=0.15.3
+    - pybedtools=0.8.1
+    - pybbi=0.3.0
+    - seaborn=0.11.1
+    - pytables=3.6.1
+
+  run:
+    - python=3.7.1
+    - r-base=3.5
+    - pip=21.1.3
+    - setuptools=49.6.0
+    - bedtools=2.30.0
+    - r-base=3.5
+    - r-seqinr=3.6_1
+    - r-MASS=7.3_51.6
+    - bioconductor-genomicranges=1.34.0
+    - bioconductor-biostrings=2.50.2
+    - bioconductor-iranges=2.16.0
+    - bioconductor-rsamtools=1.34.0
+    - r-poilog=0.4
+    - r-plyr=1.8.6
+    - numpy=1.21.0
+    - scipy=1.5.3
+    - statsmodels=0.12.2
+    - pandas=1.3.0
+    - h5py=3.1.0
+    - pysam=0.15.3
+    - pybedtools=0.8.1
+    - pybbi=0.3.0
+    - seaborn=0.11.1
+    - pytables=3.6.1
+
+test:
+ commands:
+    # You can put additional test commands to be run here.
+
+  # You can also put a file called run_test.py, run_test.sh, or run_test.bat
+  # in the recipe that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.
+
+
+
+about:
+  # user-oriented info to be displayed in anaconda.org
+  home: hhttps://github.com/AdamYaari/mutation_density
+  license: MIT
+  summary: Dig is a computational method that leverages transfer-learning to test for positive selection across arbitrary genomic elements in arbitrary cohorts while requiring the resources only of a personal computer
+  Reference: http://cb.csail.mit.edu/cb/DIG/
+  license_family: MIT

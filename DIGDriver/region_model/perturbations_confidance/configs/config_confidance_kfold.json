@@ -1,0 +1,8 @@
+{
+	"data_file": "/storage/datasets/cancer/unziped_data_matrices_10000_0_0.8.h5",
+	"base_path": "/storage/yaari/mutation-density-outputs/kfold",
+    "repetitions": 1000,
+    "alpha": 0.01,
+	"bs": 8192,
+    "k": 5
+}

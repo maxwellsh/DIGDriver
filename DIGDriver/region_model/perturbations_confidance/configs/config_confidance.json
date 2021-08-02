@@ -1,0 +1,6 @@
+{
+    "model_file": "MELA_AU_100_ALL_TRACKS",
+    "repetitions": 10,
+    "alphas": [0.01],
+    "bs": 128
+}

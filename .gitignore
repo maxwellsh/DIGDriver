@@ -1,0 +1,7 @@
+**/models
+**/runs
+**/__pycache__
+.git
+**.ipynb_checkpoints*
+**/._*
+*.egg-info
