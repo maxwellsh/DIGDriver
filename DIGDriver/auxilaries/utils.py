@@ -2,7 +2,7 @@ import multiprocessing as mp
 
 def get_cpus():
     try:
-        c = max(1, mp.get_cpus() - 2)
+        c = min(max(1, mp.cpu_count() - 2), 20)
     except:
         c = 5
     return c

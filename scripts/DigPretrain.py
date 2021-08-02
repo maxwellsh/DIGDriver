@@ -442,7 +442,7 @@ def parse_args(text=None):
     parser_e.add_argument('--indels-direct', action='store_true', default=False, 
                           help='Estimate indel parameters directly from an indel regions model. Otherwise transferred from SNV model.' 
     )
-    parser_e.add_argument('--n-procs', default=30, type=int, dest='N_procs',
+    parser_e.add_argument('--n-procs', default=utils.get_cpus(), type=int, dest='N_procs',
         help='number of cores to use for running the analysis'
     )
     parser_e.set_defaults(func=pretrain_nonc_model)
