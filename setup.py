@@ -41,6 +41,6 @@ setup(
              "scripts/DigDriver.py"
             ],
     include_package_data=True,
-    package_data={'': ['data/*.txt']},
+    package_data={'': ['data/*']},
     # entry_points={"console_scripts": ["clodius = clodius.cli.aggregate:cli"]},
 )
