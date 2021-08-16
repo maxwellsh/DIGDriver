@@ -14,3 +14,5 @@ All necessary data files are available from our [data portal](http://cb.csail.mi
 Want to learn more about Dig and its biological applications? Check out our preprint [Sherman et al. 2021](https://www.biorxiv.org/content/10.1101/2021.08.03.454669v1).
 
 Really want to get into the weeds of the deep-learning model? Check out our [ICRL paper](https://openreview.net/forum?id=KtH8W3S_RE).
+
+Please cite both papers if you make use of our resources. 
