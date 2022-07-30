@@ -556,10 +556,10 @@ def add_objectives(args):
         if args.max_muts_per_sample:
             df_mut = filter_hypermut_samples(df_mut, args.max_muts_per_sample)
 
-        df_elt = df_mut.pivot_table(index='ELT', values='OBS_MUT', aggfunc=np.sum)
+        df_elt = df_mut.pivot_table(index='ELT', values='OBS_SNV', aggfunc=np.sum)
         df_cnt = df_idx.merge(df_elt, on='ELT', how='left')
-        df_cnt.loc[df_cnt.OBS_MUT.isna(), 'OBS_MUT'] = 0
-        mut_counts = df_cnt.OBS_MUT.astype(int)
+        df_cnt.loc[df_cnt.OBS_SNV.isna(), 'OBS_SNV'] = 0
+        mut_counts = df_cnt.OBS_SNV.astype(int)
 
         # print(df_mut[df_mut.OBS_MUT > 100])
         # mut_counts = np.array([fetch_mutation_region_number(tbx, str(idx[0]), idx[1], window)
